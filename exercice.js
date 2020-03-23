@@ -11,8 +11,8 @@ db.sports.update({name:"football"}, {title:"football",require_teams:true}, {upse
 // Ajouter un field "minimum_player" aux sports qui ont besoin d'une équipe
 db.sports.update({require_teams:true}, {minimum_player:1},{upsert:true})
 
-// Augmenter de 10 tous les joeurs
-db.sports.update({}, {minimum_player:$inc:10});
+// Augmenter de 10 tous les joeurs qui ont besoin d'une team
+db.sports.update({require_teams:true}, {minimum_player:$inc:10});
 
 // Insérer un field "teams" à tous les documents 
 db.sports.update({}, {teams:[]}, {upsert:true})
