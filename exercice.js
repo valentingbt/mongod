@@ -17,5 +17,8 @@ db.sports.update({}, {minimum_player:$inc:10});
 // Insérer un field "teams" à tous les documents 
 db.sports.update({}, {teams:[]}, {upsert:true})
 
-// Insérer un field "teams" à tous les documents qui ont des joueurs
-db.sports.update({require_teams:true}, {teams:[]}, {upsert:true})
+// Insérer des joueurs
+db.sports.update({require_teams:true}, {teams:["Paul", "Valentin","Camille"]});
+
+// Mettre les joeurs titulaires ou pas
+db.sports.update({require_teams: true}, {$push: { $each: titulaire: true}})
