@@ -9,5 +9,5 @@ exercice.js
 ### Exercice 2 (DB Places)
 
 ```
-locations.js
+location.js
 ```
