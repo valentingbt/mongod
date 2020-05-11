@@ -2,12 +2,8 @@
 
 ### Exercice 1 (DB Sports)
 
-```
-exercice.js
-```
+[exercice.js](exercice.js)
 
-### Exercice 2 (DB Places)
+### Exercice 2 (DB Places)`
 
-```
-location.js
-```
+[location.js](location.js)
